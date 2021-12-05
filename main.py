@@ -4,13 +4,8 @@ from discord.ext import commands, tasks
 with open("token.txt") as token:
     TOKEN = token.read()
 
-help_message = """Use prefix $
-*$info* - Displays this message
-*$hello* - Say hello back
-*$amogus* - Say sus back
-*$rickroll - Rickrolls you!
-*$wiki **topic*** - links wikipedia page about topic specified
-*$code* - Links source code"""
+with open("help.txt") as help:
+    help_message = help.read()
 
 client = commands.Bot(command_prefix="$")
 
@@ -50,6 +45,11 @@ async def rickroll(ctx):
     await ctx.send(
         "https://tenor.com/view/rick-roll-rick-ashley-never-gonna-give-you-up-gif-22113173"
     )
+
+
+@client.command()
+async def say(ctx, arg):
+    await ctx.send(arg)
 
 
 client.run(TOKEN)
