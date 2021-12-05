@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands, tasks
+import keep_alive
 
 with open("token.txt") as token:
     TOKEN = token.read()
@@ -51,5 +52,6 @@ async def rickroll(ctx):
 async def say(ctx, arg):
     await ctx.send(arg)
 
+keep_alive.keep_alive()
 
 client.run(TOKEN)
