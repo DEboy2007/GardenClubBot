@@ -52,6 +52,10 @@ async def rickroll(ctx):
 async def say(ctx, arg):
     await ctx.send(arg)
 
+@client.command()
+async def yt(ctx, arg):
+  await ctx.send(f"https://www.youtube.com/results?search_query={arg}")
+
 keep_alive.keep_alive()
 
 client.run(TOKEN)

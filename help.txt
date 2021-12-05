@@ -6,3 +6,4 @@ Use prefix $
 *$wiki **topic*** - Links wikipedia page about topic specified
 *$code* - Links source code
 *$say **"sentence"*** - Repeats a sentence
+*yt **"search query"*** - Searches youtube for query
