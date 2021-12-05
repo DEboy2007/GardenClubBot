@@ -54,7 +54,10 @@ async def say(ctx, arg):
 
 @client.command()
 async def yt(ctx, arg):
-  await ctx.send(f"https://www.youtube.com/results?search_query={arg}")
+  new_str = ""
+  for i in arg.split():
+    new_str += i + "+"
+  await ctx.send(f"https://www.youtube.com/results?search_query={new_str}")
 
 keep_alive.keep_alive()
 
