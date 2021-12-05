@@ -33,5 +33,9 @@ async def amogus(ctx):
 async def wiki(ctx, arg):
   await ctx.send(f"https://en.wikipedia.org/wiki/{arg}")
 
+@client.command()
+async def code(ctx):
+  await ctx.send("https://github.com/DEboy2007/GardenClubBot")
+
 
 client.run(TOKEN)
