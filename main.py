@@ -33,7 +33,11 @@ async def amogus(ctx):
 
 @client.command()
 async def wiki(ctx, arg):
-    await ctx.send(f"https://en.wikipedia.org/wiki/{arg}")
+    new_str = ""
+    for i in arg.split():
+        new_str += i + "_"
+    new_str = new_str[:-1]
+    await ctx.send(f"https://en.wikipedia.org/wiki/{new_str}")
 
 
 @client.command()
@@ -52,12 +56,15 @@ async def rickroll(ctx):
 async def say(ctx, arg):
     await ctx.send(arg)
 
+
 @client.command()
 async def yt(ctx, arg):
-  new_str = ""
-  for i in arg.split():
-    new_str += i + "+"
-  await ctx.send(f"https://www.youtube.com/results?search_query={new_str}")
+    new_str = ""
+    for i in arg.split():
+        new_str += i + "+"
+    new_str = new_str[:-1]
+    await ctx.send(f"https://www.youtube.com/results?search_query={new_str}")
+
 
 keep_alive.keep_alive()
 
