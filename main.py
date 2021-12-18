@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands, tasks
-import keep_alive
 import random
 
 responses = ["You missed dum dum", "You hit lol", "You're a coward and dropped the snow because it was too cold"]
@@ -76,6 +75,5 @@ async def throw(ctx, arg):
 async def youaregay(ctx):
     await ctx.send("NO YOU YOURE THE ONE WHOSE MOM IS UNDER LEGAL DRINKING AGE GET A LIFE GET A GIRLFREIND!")
     
-keep_alive.keep_alive()
 
 client.run(TOKEN)
